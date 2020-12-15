@@ -1,4 +1,4 @@
-import TypeCheck from 'typecheck-extended';
+import TC from 'typecheck-extended';
 
 // date params are compatible with mm-dd-yyy and yyyy-mm-dd
 
@@ -32,9 +32,9 @@ export function Today() {
 }
 
 export function DateParse(date, filter, format = 'number') {
-  TypeCheck(date, 'string');
-  TypeCheck(filter, 'enum', true, ['year', 'month', 'day']);
-  TypeCheck(format, 'enum', false, ['number', 'text']);
+  TC(date, 'string');
+  TC(filter, 'enum', true, ['year', 'month', 'day']);
+  TC(format, 'enum', false, ['number', 'text']);
 
   const parsedDate = new Date(date);
   switch (filter) {
@@ -58,9 +58,10 @@ export function DateParse(date, filter, format = 'number') {
   }
 }
 
-export function TimeSpan(startDate, endDate) {
-  TypeCheck(startDate, 'string', false);
-  TypeCheck(endDate, 'string');
+export function TimeSpan(startDate, endDate, unitOverride) {
+  TC(startDate, 'string', false);
+  TC(endDate, 'string');
+  TC(unitOverride, 'enum', false, ['yearsOnly', 'daysOnly']);
 
   let start = new Date();
   if (startDate !== 'now') {
@@ -80,7 +81,7 @@ export function TimeSpan(startDate, endDate) {
 }
 
 export function CurrentAge(birthday) {
-  TypeCheck(birthday, 'string');
+  TC(birthday, 'string');
 
   const birthdate = new Date(birthday);
   const today = new Date();

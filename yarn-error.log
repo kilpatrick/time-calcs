@@ -1,0 +1,67 @@
+Arguments: 
+  /usr/local/Cellar/node/11.9.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js test
+
+PATH: 
+  /usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/kilpatrick/dev/ofs/time-calcs/package.json: Unexpected token ] in JSON at position 803
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "time-calcs",
+    "version": "0.0.0",
+    "description": "Getter for Time Related Values",
+    "license": "MIT",
+    "author": {
+      "name": "Chris Kilpatrick",
+      "email": "open@chriskilpatrick.com",
+      "url": "https://github.com/kilpatrick"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kilpatrick/time-calcs"
+    },
+    "readmeFilename": "README.md",
+    "main": "index.js",
+    "dependencies": {},
+    "scripts": {
+      "test": "jest"
+    },
+    "devDependencies": {
+      "coveralls": "3.0.2",
+      "eslint": "4.13.1",
+      "eslint-config-airbnb": "16.1.0",
+      "eslint-plugin-import": "2.9.0",
+      "eslint-plugin-jasmine": "2.9.2",
+      "eslint-plugin-jsx-a11y": "6.0.3",
+      "jest": "23.3.0"
+    },
+    "keywords": [
+      "time",
+      "date",
+      "birthdate",
+      "age",
+      "timespan",
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
